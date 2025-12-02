@@ -1,0 +1,9 @@
+{
+  "name": "YOO_koishi", 
+  "bio": "半人半灵的半吊子🐧",
+  "tags": ["Linux", "cpp" , "Astro" , "compiler"], 
+  "social": {
+    "github": "YOOkoishi",
+    "blog": "https://blog.yookoishi.com"
+  }
+}

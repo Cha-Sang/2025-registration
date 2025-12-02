@@ -1,5 +1,108 @@
 [
   {
+    "id": "Epi",
+    "name": "Epi",
+    "bio": "（我要偷偷写小作文）\n 北科计科大三在读，音游体验家，ACG 爱好者，解谜爱好者，超轻度游戏玩家，术力口厨，…。目前现实学习生活比较充实所以可能博客更新的不是很频繁,等年终可能会写一些总结之类的东西。\n Epi [/ˈɛpi/] 这个名字源自于 “Epiphany（顿悟）” 的简写，是不知从某处看来的一个单词，后来因为这个名字有点长于是就简写做了 Epi。在简写后这个名字又兼有了 “Epic” “Epiphyllum”“eπ” 的解读方法，就一直这样子用下去了。\n 然后对解谜感兴趣的欢迎找私戳我加入北科谜协！\n 最后看到 🐧(emoji) 就自动输出 GUGUGAGA (碱基序列) 大家有什么头猪吗",
+    "tags": [
+      "🧩Puzzle",
+      "🎶Vocaloid",
+      "📚 Literature"
+    ],
+    "social": {
+      "github": "Episvr",
+      "blog": "https://episvr.top"
+    },
+    "avatarUrl": "avatars/Epi.jpg"
+  },
+  {
+    "id": "Ginger_Kay",
+    "name": "Ginger Kay",
+    "bio": "Soviet Union Lives Forever!",
+    "tags": [
+      "ICPC",
+      "CCCP"
+    ],
+    "social": {
+      "github": "Ginger_Kay",
+      "blog": "Coming for soon..."
+    },
+    "avatarUrl": "avatars/Ginger_Kay.jpg"
+  },
+  {
+    "id": "Kaslana",
+    "name": "Kaslana",
+    "bio": "我是啥笔二次元",
+    "tags": [
+      "Unity",
+      "C#",
+      "C++"
+    ],
+    "social": {
+      "github": "Kaslana-423",
+      "blog": "https://developer.unity.cn/u/ji-li-yao"
+    },
+    "avatarUrl": "avatars/Kaslana.jpg"
+  },
+  {
+    "id": "Odys-simple",
+    "name": "Odys",
+    "bio": "Building processors, one Verilog module at a time",
+    "tags": [
+      "verilog",
+      "CPU design"
+    ],
+    "social": {
+      "github": "Odys-simple",
+      "blog": "/.../TODO..."
+    },
+    "avatarUrl": "avatars/Odys-simple.webp"
+  },
+  {
+    "id": "Radiqal",
+    "name": "Radiqal",
+    "bio": "这个人很神秘，什么都没有写🐧",
+    "tags": [
+      "Linux🐧",
+      "AI"
+    ],
+    "social": {
+      "github": "Radiqalo",
+      "blog": "https://radiqalo.github.io"
+    },
+    "avatarUrl": "avatars/Radiqal.jpg"
+  },
+  {
+    "id": "Siriuns",
+    "name": "Siriuns",
+    "bio": "🤔🤔🤔",
+    "tags": [
+      "Tag",
+      "Ai",
+      "Math"
+    ],
+    "social": {
+      "github": "Siriuns-X",
+      "blog": "https://siriuns.netlify.app/"
+    },
+    "avatarUrl": "avatars/Siriuns.png"
+  },
+  {
+    "id": "YOO_koishi",
+    "name": "YOO_koishi",
+    "bio": "半人半灵的半吊子🐧",
+    "tags": [
+      "Linux",
+      "cpp",
+      "Astro",
+      "compiler"
+    ],
+    "social": {
+      "github": "YOOkoishi",
+      "blog": "https://blog.yookoishi.com"
+    },
+    "avatarUrl": "avatars/YOO_koishi.png"
+  },
+  {
     "id": "molinwu",
     "name": "molinwu",
     "bio": "这个人很懒，什么都没有留下🐧",
@@ -13,6 +116,35 @@
       "blog": "https://wamingmo.github.io/"
     },
     "avatarUrl": "avatars/molinwu.jpg"
+  },
+  {
+    "id": "revlogi",
+    "name": "revlogi",
+    "bio": "rookie",
+    "tags": [
+      "MacOS",
+      "Python",
+      "Scheme",
+      "Haskell"
+    ],
+    "social": {
+      "github": "RevLogi",
+      "blog": "Under construction..."
+    },
+    "avatarUrl": "avatars/revlogi.jpg"
+  },
+  {
+    "id": "sxltj",
+    "name": "山西落汤鸡",
+    "bio": "What can I say?",
+    "tags": [
+      "PLT"
+    ],
+    "social": {
+      "github": "sxltj",
+      "blog": "https://sxltj.github.io/"
+    },
+    "avatarUrl": "avatars/sxltj.png"
   },
   {
     "id": "wdlin",
