@@ -33,19 +33,7 @@ export async function initSimulation(canvas) {
     const res = await fetch(dataUrl);
     const members = await res.json();
     
-    const balls = await Promise.all(members.map(async (m) => {
-        // 预加载图片
-        let img = null;
-        if (m.avatarUrl) {
-            img = new Image();
-            if (!m.avatarUrl.startsWith('/') && !m.avatarUrl.startsWith('http')) {
-                 img.src = baseUrl + m.avatarUrl;
-            } else {
-                 img.src = m.avatarUrl;
-            }
-            await new Promise(r => img.onload = r); // 等待加载完成以获取尺寸
-        }
-
+    const balls = members.map((m) => {
         const radius = 35; // 头像半径
         const x = Math.random() * (width - 100) + 50;
         const y = Math.random() * (height - 100) + 50;
@@ -56,9 +44,22 @@ export async function initSimulation(canvas) {
             plugin: {
                 // 将数据绑定到物理体上，供渲染和交互使用
                 userData: m,
-                image: img 
+                image: null // 初始为空，加载完成后更新
             }
         });
+
+        // 异步加载图片，不阻塞物理世界生成
+        if (m.avatarUrl) {
+            const img = new Image();
+            if (!m.avatarUrl.startsWith('/') && !m.avatarUrl.startsWith('http')) {
+                 img.src = baseUrl + m.avatarUrl;
+            } else {
+                 img.src = m.avatarUrl;
+            }
+            img.onload = () => {
+                ball.plugin.image = img;
+            };
+        }
         
         // 初始推力
         Matter.Body.setVelocity(ball, {
@@ -67,7 +68,7 @@ export async function initSimulation(canvas) {
         });
 
         return ball;
-    }));
+    });
 
     Composite.add(engine.world, balls);
 
