@@ -1,0 +1,9 @@
+{
+  "name": "你的昵称", 
+  "bio": "这是一句话简介，支持 Emoji 🐧",
+  "tags": ["Linux", "Web", "Rust"], 
+  "social": {
+    "github": "your_github_id",
+    "blog": "https://yourblog.com"
+  }
+}

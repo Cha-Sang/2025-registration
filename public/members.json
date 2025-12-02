@@ -1,0 +1,16 @@
+[
+  {
+    "id": "wdlin",
+    "name": "wdlin",
+    "bio": "Touching fish!",
+    "tags": [
+      "🐧Linux",
+      "Rust"
+    ],
+    "social": {
+      "github": "wdlin233",
+      "blog": "wdlin233.github.io"
+    },
+    "avatarUrl": "/avatars/wdlin.jpg"
+  }
+]

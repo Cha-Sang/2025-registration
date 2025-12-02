@@ -1,0 +1,169 @@
+/* =========================================
+   1. 全局设置 (Reset & Base)
+   ========================================= */
+:root {
+  --bg-color: #111;           /* 深黑背景 */
+  --terminal-green: #00ff00;  /* 经典的终端绿 */
+  --text-color: #eeeeee;      /* 柔和白 */
+  --accent-color: #2a2a2a;    /* 弹窗背景 */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Fira Code', 'Courier New', Courier, monospace; /* 强制等宽字体 */
+  overflow: hidden; /* 禁止滚动，画布全屏 */
+  user-select: none; /* 防止拖拽时选中文字 */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* =========================================
+   2. 画布区域 (Canvas)
+   ========================================= */
+canvas#world {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  cursor: grab; /* 提示可以抓取 */
+}
+
+canvas#world:active {
+  cursor: grabbing; /* 抓取时的手势 */
+}
+
+/* =========================================
+   3. 弹窗容器 (Modal Backdrop)
+   ========================================= */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* 半透明遮罩 */
+  backdrop-filter: blur(4px); /* 背景模糊效果 (毛玻璃) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: opacity 0.3s ease;
+}
+
+/* 隐藏状态 */
+.modal.hidden {
+  display: none;
+  /* 或者用 opacity: 0; pointer-events: none; 来做渐隐动画 */
+}
+
+/* =========================================
+   4. 弹窗内容 (Retro Terminal Card)
+   ========================================= */
+.modal-content {
+  background-color: var(--accent-color);
+  border: 2px solid var(--terminal-green); /* 绿色边框 */
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.4); /* 绿色霓虹发光 */
+  width: 90%;
+  max-width: 400px;
+  padding: 2rem;
+  border-radius: 4px; /* 轻微圆角 */
+  text-align: center;
+  position: relative;
+  
+  /* 简单的入场动画 */
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* =========================================
+   5. 弹窗内部元素详情
+   ========================================= */
+
+/* 头像 */
+#m-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid var(--terminal-green);
+  object-fit: cover;
+  margin-bottom: 1rem;
+  background-color: #000;
+}
+
+/* 名字 */
+#m-name {
+  font-size: 1.5rem;
+  color: var(--terminal-green);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+}
+
+/* 简介 */
+#m-bio {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #ccc;
+  margin-bottom: 1.5rem;
+  min-height: 1.2em;
+}
+
+/* 标签容器 */
+#m-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 2rem;
+}
+
+/* 单个标签 */
+.tag {
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border: 1px solid #555;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  color: #aaa;
+}
+
+/* 标签悬停特效 */
+.tag:hover {
+  border-color: var(--terminal-green);
+  color: var(--terminal-green);
+}
+
+/* =========================================
+   6. 关闭按钮 (Command Button)
+   ========================================= */
+#m-close {
+  background: transparent;
+  border: 1px solid var(--terminal-green);
+  color: var(--terminal-green);
+  padding: 0.5rem 2rem;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#m-close:hover {
+  background-color: var(--terminal-green);
+  color: #000; /* 悬停时反色 */
+  box-shadow: 0 0 10px var(--terminal-green);
+}
+
+#m-close:active {
+  transform: scale(0.98);
+}
